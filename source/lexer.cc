@@ -1,4 +1,6 @@
+#include<string>
 #include<iostream>
+#include<sstream>
 
 #include"lexer.hh"
 #include"shared.hh"
@@ -42,6 +44,14 @@ lexer::lexer(){
 void lexer::lex( const string& text ){
   unsigned long row = 0;
   unsigned long column = 0;
+  stringstream ss( text );
+  string word;
+
+  while( ss >> word ){
+    for( auto c : word ){
+      //if( c ==
+    }
+  }
 
   for( unsigned int i = 0; i < text.size(); ++i ){
     string tok;
